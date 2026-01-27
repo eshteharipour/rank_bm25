@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the original work and this fork."
+title: "Rank-BM25: A Collection of BM25 Algorithms in Python"
+type: software
+authors:
+  - family-names: "Brown"
+    given-names: "Dorian"
+    alias: "dorianbrown"
+  - family-names: "Eshteharipour"
+    given-names: "Shayan"
+    alias: "eshteharipour"
+repository-code: "https://github.com/eshteharipour/rank_bm25"
+url: "https://github.com/dorianbrown/rank_bm25"
+license: Apache-2.0
+version: 1.0.0
+date-released: 2026-01-27
+references:
+  - type: software
+    title: "Rank-BM25 (Original)"
+    authors:
+      - family-names: "Brown"
+        given-names: "Dorian"
+    repository-code: "https://github.com/dorianbrown/rank_bm25"
+    doi: "10.5281/zenodo.4520057"
+    year: 2020

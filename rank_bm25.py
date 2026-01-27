@@ -1,5 +1,15 @@
 #!/usr/bin/env python
 
+"""
+Rank-BM25: A Collection of BM25 and Information Retrieval Algorithms
+
+Original BM25 implementations by Dorian Brown (https://github.com/dorianbrown/rank_bm25)
+Additional algorithms (TF-IDF, Jaccard, IDF) by S. Eshteharipour
+
+Licensed under the Apache License, Version 2.0
+Based on: Trotman et al, Improvements to BM25 and Language Models Examined
+"""
+
 import math
 from multiprocessing import Pool, cpu_count
 

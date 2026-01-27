@@ -2,20 +2,29 @@ Metadata-Version: 2.1
 Name: rank-bm25
 Version: 1.0.0
 Summary: A Python implementation of BM25 Ranking function
-Home-page: https://github.com/dorianbrown/rank_bm25
+Home-page: https://github.com/eshteharipour/rank_bm25
 Author: Dorian Brown
-Author-email: drdorian@gmail.com
-License: MIT
+Author-email: dorianstuartbrown@gmail.com
+Maintainer: S. Eshteharipour
+License: Apache-2.0
 Platform: UNKNOWN
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
-Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: Apache Software License
 Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.6
 Classifier: Programming Language :: Python :: 3.7
 Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: 3.14
 Description-Content-Type: text/markdown
 
 # Rank-BM25: A Python implementation of BM25
 
 Pure Python implementation of the BM25 ranking function.
+
+This is a maintained fork with additional ranking algorithms (TF-IDF variants, Jaccard similarity) and enhanced search functionality.

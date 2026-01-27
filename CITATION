@@ -1,5 +1,14 @@
-@software{rank_bm25,
-  author = {Dorian Brown},
+@software{rank_bm25_fork,
+  author = {Eshteharipour, S. and Brown, Dorian},
+  title = {{Rank-BM25: A Collection of BM25 and Information Retrieval Algorithms in Python}},
+  year = 2026,
+  version = {1.0.0},
+  url = {https://github.com/eshteharipour/rank_bm25},
+  note = {Fork of original work by Dorian Brown with additional algorithms (TF-IDF, Jaccard, IDF)}
+}
+
+@software{rank_bm25_original,
+  author = {Brown, Dorian},
   title = {{Rank-BM25: A Collection of BM25 Algorithms in Python}},
   year = 2020,
   publisher = {Zenodo},
