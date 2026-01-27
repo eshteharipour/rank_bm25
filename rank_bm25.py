@@ -295,6 +295,40 @@ class TFIDF_B(BM25):  # Claude
         return score.tolist()
 
 
+class TFIDF_C(BM25):
+    def __init__(self, corpus, tokenizer=None):
+        super().__init__(corpus, tokenizer)
+
+    def _calc_idf(self, nd):
+        self.idf = {}
+        for word, freq in nd.items():
+            idf = math.log(
+                self.corpus_size / (freq + 1)
+            )  # +1 to avoid division by zero
+            self.idf[word] = idf
+
+    def get_scores(self, query):
+        # Compute unnormalized TF-IDF score
+        score = np.zeros(self.corpus_size)
+
+        for q in query:
+            q_freq = np.array([(doc.get(q) or 0) for doc in self.doc_freqs])
+            score += q_freq * (self.idf.get(q) or 0)
+
+        # === NEW: L2 Normalize each document's TF-IDF vector ===
+        norms = np.zeros(self.corpus_size)
+        for i, doc in enumerate(self.doc_freqs):
+            tfidf_squared_sum = sum(
+                (tf * self.idf.get(term, 0)) ** 2 for term, tf in doc.items()
+            )
+            norms[i] = (
+                math.sqrt(tfidf_squared_sum) if tfidf_squared_sum > 0 else 1.0
+            )  # avoid div-by-zero
+
+        normalized_score = score / norms
+        return normalized_score
+
+
 class Jaccard(BM25):
     def __init__(self, corpus, tokenizer=None):
         """
